@@ -35,6 +35,18 @@
           <li>View/Run</li>
           <li>Crate New</li>
         </ol>
-      </details>     
+      </details>    
+      
+      <script>
+        const $detailsList = document.querySelectorAll('details')
+        $detailsList.forEach(($details) => {
+          $details.querySelector('summary').addEventListener('click', expand)
+        })
+        function expand() {
+          $detailsList.forEach(($details) => {
+            $details.removeAttribute('open')
+          })
+        }
+      </script>
 </body>
 </html>
